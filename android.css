@@ -34,7 +34,6 @@ body {
 
 a.external::after {
     content: '\00A0\1F517';
-
 }
 
 header{
@@ -49,6 +48,7 @@ header h1 {
     font-family: var(--fonte-destaque);
     margin-bottom: 20px;
     font-size: 3em;
+    font-weight: normal;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.69);
 }
 
@@ -61,6 +61,7 @@ header p {
     padding-right: 10px;
     padding-left: 10px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.559);
+    margin-bottom: 20px;
 
 }
 
@@ -71,7 +72,7 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: var(--cor1);
     padding: 10px;
     text-decoration: none; /*tirar sublinhado dos links*/
     font-weight: bold;
@@ -143,6 +144,22 @@ main h2 {
     font-size: 1.3em;
     background-image: linear-gradient(to right, var(--cor1), transparent) ;
     text-indent: 8px;
+}
+
+div.video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 57%;
+    position: relative;
+}
+
+div.video iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
 }
 
 aside {
