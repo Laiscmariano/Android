@@ -31,6 +31,12 @@ body {
     background-color:var(--cor0);
     font-family: var(--fonte-padrao);
 }
+
+a.external::after {
+    content: '\00A0\1F517';
+
+}
+
 header{
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
     text-align: center;
@@ -91,11 +97,37 @@ main{
     border-bottom-right-radius: 10px;
 }
 
+main p {
+    margin: 15px 0px 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 1.7em;/*altura entre linhas*/
+}
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+}
+
 main img {
     width: 100%;
 }
+
+main a {
+    text-decoration: none;
+    background-color: var(--cor1);
+    color: var(--cor5);
+    padding: 2px 6px;
+    font-weight: bold;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
 main img.pequena {
-    width: 50%;
+    max-width: 350px;
     display: block;/*centralizar imagens*/
     margin: auto;
 }
@@ -107,10 +139,50 @@ main h1 {
 
 main h2 {
     font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent) ;
+    text-indent: 8px;
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+aside h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.268);
+}
+
+aside ul {
+        list-style-type: "\2714\00A0";/*emoji check, 00A0 para adicionar um espaço*/
+        list-style-position: inside;
+        columns: 2; /*está dividindo a lista em duas colunas*/
 }
 
 footer {
     background-color: var(--cor5);
     color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
 }
 
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+
+}
